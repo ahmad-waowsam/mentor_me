@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#def8f8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".SearchFragment">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="100dp"
+
+        >
+    <TextView
+        android:id="@+id/donthave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#157177"
+        android:text="<-"
+        android:textSize="30dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+
+        android:textStyle="bold"
+
+
+
+        />
+    <TextView
+        android:id="@+id/hellomsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/donthave"
+
+        android:text="Notifications"
+        android:textColor="#157177"
+
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_notifications_none_24"
+            android:layout_toRightOf="@+id/hellomsg"
+            android:layout_marginLeft="15dp"
+
+            />
+
+        <TextView
+            android:id="@+id/clear"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#ECB800"
+            android:layout_below="@+id/hellomsg"
+            android:text="Clear All"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/noti_parent_1"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/clear"
+            android:layout_height="wrap_content">
+
+            <!-- TextView for Clear All -->
+            <TextView
+                android:id="@+id/noti_1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+
+                android:text="You have added a mentor, Alex. Thank you!"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- ImageView for Cancel Button -->
+            <ImageView
+                android:id="@+id/cancelButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/baseline_cancel_24"
+                android:layout_toRightOf="@+id/noti_1"
+
+                android:layout_marginTop="30dp"
+                android:layout_alignParentEnd="true"
+
+                android:contentDescription="Cancel Button"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/noti_parent_2"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/noti_parent_1"
+            android:layout_height="wrap_content">
+
+            <!-- TextView for Notification 2 -->
+            <TextView
+                android:id="@+id/noti_2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Your favorites list is expanding. Impressive"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- ImageView for Cancel Button -->
+            <ImageView
+                android:id="@+id/cancelButton_2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/baseline_cancel_24"
+                android:layout_toRightOf="@+id/noti_2"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="Cancel Button"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/noti_parent_3"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/noti_parent_2"
+            android:layout_height="wrap_content">
+
+            <!-- TextView for Notification 3 -->
+            <TextView
+                android:id="@+id/noti_3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="You have a new message in community.     "
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- ImageView for Cancel Button -->
+            <ImageView
+                android:id="@+id/cancelButton_3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/baseline_cancel_24"
+                android:layout_toRightOf="@+id/noti_3"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="Cancel Button"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/circleTop"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-100dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <!-- Second Circle (Touching Left) -->
+    <ImageView
+        android:id="@+id/circleLeft"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-70dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+
+        <!-- res/layout/layout_search_bar.xml -->
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</FrameLayout>

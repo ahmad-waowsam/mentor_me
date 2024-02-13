@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".SearchFragment">
+
+
+
+    <ImageView
+        android:id="@+id/circleTop"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-100dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <!-- Second Circle (Touching Left) -->
+    <ImageView
+        android:id="@+id/circleLeft"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-70dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        >
+
+        <TextView
+            android:id="@+id/donthave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#157177"
+            android:text="<-"
+            android:textSize="30dp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentTop="true"
+
+            android:textStyle="bold"
+
+
+
+            />
+        <!-- res/layout/layout_search_bar.xml -->
+        <TextView
+            android:id="@+id/hellomsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/donthave"
+            android:text="Booked Sessions"
+            android:textColor="#157177"
+
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <!-- res/layout/sample_layout.xml -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="240dp"
+        android:padding="16dp">
+
+        <!-- Square Rounded Circle -->
+        <ImageView
+
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/square_rounded_circle"
+            android:src="@drawable/peter"
+            android:clipToOutline="true"
+
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Smaller Rectangular Shape with Information -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- Name and Rate -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="John Cooper"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/rateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ECB800"
+                    android:text="24th Dec,2023" />
+
+            </LinearLayout>
+
+            <!-- Position and Heart Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/positionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lead - Tech officer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ECB800"
+                    android:text="1:00 pm"
+
+
+            </LinearLayout>
+
+            <!-- Availability TextField -->
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="240dp"
+        android:padding="16dp">
+
+        <!-- Square Rounded Circle -->
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/square_rounded_circle"
+            android:src="@drawable/peter"
+            android:clipToOutline="true"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Smaller Rectangular Shape with Information -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- Name and Rate -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nameTextView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="John Cooper"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/rateTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ECB800"
+                    android:text="24th Dec, 2023" />
+
+            </LinearLayout>
+
+            <!-- Position and Heart Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/positionTextView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lead - Tech officer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ECB800"
+                    android:text="1:00 pm" />
+
+            </LinearLayout>
+
+            <!-- Availability TextField -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Second Copy -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="380dp"
+        android:padding="16dp">
+
+        <!-- Square Rounded Circle -->
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/square_rounded_circle"
+            android:src="@drawable/emily"
+            android:clipToOutline="true"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Smaller Rectangular Shape with Information -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- Name and Rate -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nameTextView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Emily"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/rateTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ECB800"
+                    android:text="25th Dec, 2023" />
+
+            </LinearLayout>
+
+            <!-- Position and Heart Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/positionTextView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Senior Developer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ECB800"
+                    android:text="2:00 pm" />
+
+            </LinearLayout>
+
+            <!-- Availability TextField -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- res/layout/sample_layout.xml -->
+
+
+    <!-- res/layout/sample_layout.xml -->
+
+
+
+</FrameLayout>

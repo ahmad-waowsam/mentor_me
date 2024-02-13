@@ -156,7 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_button"
+                    android:backgroundTint="#FFFFFF"
                     android:paddingStart="60dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="60dp"

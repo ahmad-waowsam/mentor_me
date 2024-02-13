@@ -1,0 +1,29 @@
+<!-- res/drawable/circular_search_bar.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#CCCCCC" /> <!-- Background color of the circle -->
+        </shape>
+    </item>
+
+    <!-- Search Icon in the Center -->
+    <item android:drawable="@drawable/baseline_search_24"
+        android:gravity="center" />
+
+    <!-- Text inside the Circle (Hint: Search) -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="" />
+
+        <!-- You can customize the hint text appearance below -->
+        <bitmap
+            android:gravity="center"
+            android:text="Search"
+            android:textSize="12sp"
+            android:textColor="#000000" /> <!-- Customize the text size and color -->
+    </item>
+
+</layer-list>

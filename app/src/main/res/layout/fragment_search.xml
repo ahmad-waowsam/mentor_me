@@ -3,12 +3,311 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     tools:context=".SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/donthave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#157177"
+        android:text="<-"
+        android:textSize="30dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:textStyle="bold"
+
+
+
+        />
+    <ImageView
+        android:id="@+id/circleTop"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-100dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <!-- Second Circle (Touching Left) -->
+    <ImageView
+        android:id="@+id/circleLeft"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-70dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        >
+
+        <TextView
+            android:id="@+id/hellomsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="60dp"
+            android:text="Let's Find.."
+            android:textColor="#157177"
+
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <!-- res/layout/layout_search_bar.xml -->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/search"
+            android:layout_alignStart="@+id/hellomsg"
+            android:layout_below="@+id/hellomsg"
+            android:background="@drawable/circular_search">
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/baseline_search_24"
+                android:contentDescription="Search Icon"/>
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/searchIcon"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:inputType="text"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+
+            android:layout_marginTop="40dp"
+            android:layout_alignLeft="@id/search"
+            android:text="Recent searches"
+            android:textColor="#157177"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+
+            />
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/recent"
+        android:layout_alignLeft="@+id/recent">
+        <TextView
+            android:id="@+id/mentor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Mentor 1"
+            android:textColor="#2B2B2B"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/mentor1"
+            android:src="@drawable/baseline_cancel_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="120dp" />
+
+        <!-- Mentor 2 -->
+        <TextView
+            android:id="@+id/mentor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mentor1"
+            android:layout_marginTop="20dp"
+            android:text="Mentor 2"
+            android:textColor="#2B2B2B"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mentor1"
+            android:layout_toRightOf="@+id/mentor2"
+            android:src="@drawable/baseline_cancel_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp" />
+
+        <!-- Mentor 3 -->
+        <TextView
+            android:id="@+id/mentor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mentor2"
+            android:layout_marginTop="20dp"
+            android:text="Mentor 3"
+            android:textColor="#2B2B2B"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mentor2"
+            android:layout_toRightOf="@+id/mentor3"
+            android:src="@drawable/baseline_cancel_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp" />
+
+
+    </RelativeLayout>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="24dp"
+            android:text="Browse Categories"
+            android:layout_marginTop="460dp"
+            android:textStyle="bold"
+            android:textColor="#157177"
+            android:layout_marginLeft="30dp"
+
+            />
+    </RelativeLayout>
+
+    <!-- res/layout/your_layout.xml -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="500dp">
+
+        <!-- Entreprenuership -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Circular Pic -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/circlepic" />
+
+            <!-- Text Field for "Entreprenuership" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Entreprenuership"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"/>
+
+            <!-- Outward Arrow Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_arrow_outward_24"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- Personal Growth -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Circular Pic -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/circlepic" />
+
+            <!-- Text Field for "Personal Growth" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Personal Growth"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"/>
+
+            <!-- Outward Arrow Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_arrow_outward_24"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- Education -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Circular Pic -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/circlepic" />
+
+            <!-- Text Field for "Education" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Education"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"/>
+
+            <!-- Outward Arrow Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_arrow_outward_24"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 </FrameLayout>
