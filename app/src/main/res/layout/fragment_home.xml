@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/circleTop"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-100dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <!-- Second Circle (Touching Left) -->
+    <ImageView
+        android:id="@+id/circleLeft"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-70dp"
+        android:alpha="0.5"
+        android:background="@drawable/bigcircle" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/hellomsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="60dp"
+            android:text="Hello,"
+            android:textColor="@color/black"
+
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/hellomsg"
+            android:text="Ali"
+            android:textColor="#157177"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ready_mentor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hellomsg"
+            android:layout_alignLeft="@+id/hellomsg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Ready for mentorship? Let’s begin the journey!"
+
+
+            android:textColor="#157177"
+            android:textSize="16dp" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ready_mentor"
+            android:layout_alignLeft="@+id/ready_mentor"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="80dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+
+                <Button
+                    android:id="@+id/allbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.25"
+                    android:backgroundTint="#157177"
+                    android:text="All"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+
+                    />
+
+                <Button
+                    android:id="@+id/Education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/allbutton"
+                    android:alpha="0.25"
+                    android:backgroundTint="#157177"
+                    android:text="Education"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+
+                    />
+
+                <Button
+                    android:id="@+id/Entrepreneurship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/Education"
+                    android:alpha="0.25"
+                    android:backgroundTint="#157177"
+                    android:text="Entrepreneurship"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/PersonalGrowth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/Entrepreneurship"
+                    android:alpha="0.25"
+                    android:backgroundTint="#157177"
+                    android:text="Personal Growth"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/topmentors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_view"
+            android:layout_alignLeft="@+id/horizontal_view"
+            android:layout_marginTop="5dp"
+            android:text="Top Mentors for you"
+            android:textColor="#157177"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/textViewViewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="View All"
+            android:textColor="#157177"
+            android:textSize="12dp" />
+
+        <HorizontalScrollView
+            android:id="@+id/mentor_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topmentors"
+            android:layout_alignLeft="@+id/ready_mentor"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rectangle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal">
+
+                    <!-- First LinearLayout -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewDescription1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewDescription2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Second LinearLayout -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewDescription3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewDescription4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Third LinearLayout -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewDescription5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewDescription6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+        <TextView
+            android:id="@+id/Edu_mentors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Education Mentors"
+            android:textColor="#157177"
+            android:layout_below="@+id/mentor_view"
+            android:layout_alignLeft="@+id/mentor_view"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/education_mentor_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Edu_mentors"
+            android:layout_alignLeft="@+id/ready_mentor"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rectangle_education_mentor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal">
+
+                    <!-- First LinearLayout for Education Mentors -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewEducationDescription1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewEducationDescription2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Second LinearLayout for Education Mentors -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewEducationDescription3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewEducationDescription4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Third LinearLayout for Education Mentors -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewEducationDescription5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewEducationDescription6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/Recent_mentors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Recent Mentors"
+            android:textColor="#157177"
+            android:layout_below="@+id/education_mentor_view"
+            android:layout_alignLeft="@+id/mentor_view"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/recent_mentor_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Recent_mentors"
+            android:layout_alignLeft="@+id/ready_mentor"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rectangle_recent_mentor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal">
+
+                    <!-- First LinearLayout for Recent Mentors -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewRecentDescription1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewRecentDescription2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Second LinearLayout for Recent Mentors -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewRecentDescription3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewRecentDescription4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Third LinearLayout for Recent Mentors -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="140dp"
+                        android:orientation="vertical">
+
+                        <!-- Top Two-Thirds for ImageButton -->
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/rectangle_person"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- Bottom One-Third for TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Add TextViews for Description -->
+                            <TextView
+                                android:id="@+id/textViewRecentDescription5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textViewRecentDescription6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Description Line 2"
+                                android:textSize="12sp" />
+
+                            <!-- Add more TextViews for additional description lines if needed -->
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

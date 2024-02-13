@@ -1,0 +1,11 @@
+<!-- res/values/arrays.xml -->
+<resources>
+    <string-array name="countries">
+        <item>Afghanistan</item>
+        <item>Bangladesh</item>
+        <item>Pakistan</item>
+        <item>America</item>
+        <item>Philippines</item>
+        <!-- Add more countries as needed -->
+    </string-array>
+</resources>
