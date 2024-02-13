@@ -5,11 +5,15 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.widget.TextView  // Import TextView class
 import androidx.appcompat.app.AppCompatActivity
+import com.example.assign_1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater);
+        setContentView(binding.root)
+
         setContentView(R.layout.activity_main)
 
         val textViewMentor: TextView = findViewById(R.id.textViewMentor)
