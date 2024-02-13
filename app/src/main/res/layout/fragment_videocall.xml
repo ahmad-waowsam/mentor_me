@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideocallFragment"
+    android:background="#def8f8">
+
+
+    <RelativeLayout
+        android:id="@+id/rectangle_3"
+        android:layout_width="430dp"
+        android:layout_height="802dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#CCCCCC">
+
+        <!-- Arrow Back Button (ImageView with Button Background) -->
+        <TextView
+            android:id="@+id/Timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:text="50:08"
+            android:textColor="@color/black"
+
+
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="145dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="550dp"
+            android:background="#FFFFFF"
+
+            >
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|center"
+
+        >
+
+
+
+        <!-- Photo -->
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="90dp"
+            android:layout_height="5dp"
+
+            android:layout_marginBottom="80dp"
+
+            android:layout_centerHorizontal="true"
+
+            android:background="@drawable/rounded_border"
+            android:textAppearance="@style/slo_mo"
+            android:textSize="12dp" />
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom">
+
+        <ImageView
+            android:id="@+id/gall_btn"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_mic_off_24"
+
+            android:layout_marginTop="40dp"
+            android:contentDescription="Icon Description"/>
+        <!-- res/layout/your_layout.xml -->
+
+            <!-- Assuming the first ImageView is for "vid" -->
+            <ImageView
+                android:id="@+id/vid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_videocam_off_24"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/gall_btn"
+                android:contentDescription="Icon Description"/>
+
+            <!-- Second ImageView to the right of "vid" -->
+            <ImageView
+                android:id="@+id/secondImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/baseline_restart_alt_24"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/vid"
+                android:contentDescription="Second Icon Description"/>
+
+            <!-- Third ImageView to the right of "secondImageView" -->
+            <ImageView
+                android:id="@+id/thirdImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_cancel_24"
+                android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/secondImageView"
+            android:contentDescription="Third Icon Description"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
+
+
+

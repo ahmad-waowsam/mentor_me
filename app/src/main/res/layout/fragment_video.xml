@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CameraFragment"
+    tools:context=".VideoFragment"
     android:background="#def8f8">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,44 +16,45 @@
         android:layout_marginTop="117dp"
         android:background="#CCCCCC">
 
-    <!-- Arrow Back Button (ImageView with Button Background) -->
-    <ImageView
-        android:id="@+id/arrowBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:src="@drawable/baseline_arrow_back_24"
-        android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="Arrow Back"/>
+        <!-- Arrow Back Button (ImageView with Button Background) -->
+        <ImageView
+            android:id="@+id/arrowBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Arrow Back"/>
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="bottom">
-    <TextView
-        android:id="@+id/slo_mo"
-        android:layout_width="62.22dp"
-        android:layout_height="18dp"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="23dp"
+        <TextView
+            android:id="@+id/slo_mo"
+            android:layout_width="62.22dp"
+            android:layout_height="18dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
 
-        android:gravity="center_horizontal|top"
-        android:text="Slo-mo"
-        android:textAppearance="@style/slo_mo"
-        android:textSize="12dp" />
+            android:gravity="center_horizontal|top"
+            android:text="Slo-mo"
+            android:textAppearance="@style/slo_mo"
+            android:textSize="12dp" />
         <TextView
             android:id="@+id/video"
             android:layout_width="62.22dp"
             android:layout_height="18dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="80dp"
-            android:layout_toRightOf="@+id/slo_mo"
+            android:layout_toRightOf="@+id/photo"
             android:gravity="center_horizontal|top"
             android:text="Video"
+            android:background="@drawable/rounded_border"
             android:textAppearance="@style/slo_mo"
             android:textSize="12dp" />
 
@@ -64,10 +65,9 @@
             android:layout_height="18dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="80dp"
-            android:layout_toRightOf="@+id/video"
+            android:layout_toRightOf="@+id/slo_mo"
             android:gravity="center_horizontal|top"
             android:text="Photo"
-            android:background="@drawable/rounded_border"
             android:textAppearance="@style/slo_mo"
             android:textSize="12dp" />
 
@@ -78,7 +78,7 @@
             android:layout_height="18dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="80dp"
-            android:layout_toRightOf="@+id/photo"
+            android:layout_toRightOf="@+id/video"
             android:gravity="center_horizontal|top"
             android:text="Square"
             android:textAppearance="@style/slo_mo"
